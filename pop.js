@@ -1,4 +1,4 @@
-const myArray = [1, 2, 3, 4, 5];
+let myArray = [1, 2, 3, 4, 5];
 
 let removedElement = myArray.pop();
 
@@ -10,3 +10,29 @@ console.log('수정된 배열 : ', myArray)
 //수정된 배열 :  [ 1, 2, 3, 4 ]
 
 // 마지막 요소를 제거한 나머지 전체 배열의 값들을 불러온다.
+
+
+let stack = [];
+stack.push(1);
+stack.push(2);
+stack.push(3);
+
+// stack 배열에 1,2,3 값을 push로 추가.
+let poppedValue = stack.pop();
+// poppedValue변수에 stack 추가 된 값을 pop으로 제거.
+
+console.log('제거된 요소 : ', poppedValue) // 제거된 요소 : 3
+
+console.log('수정된 스텍 : ', stack) // 수정된 스텍 :  [ 1, 2 ]
+
+//* Q1
+let originalArray = [15, 25, 35, 45, 55];
+
+// 최근에 추가된 요소를 제거하고, 제거된 요소를 출력하는 함수 작성
+function removeLastElement(arr) {
+  arr.pop();
+}
+
+removeLastElement(originalArray);
+
+console.log('수정된 배열 : ', originalArray)
