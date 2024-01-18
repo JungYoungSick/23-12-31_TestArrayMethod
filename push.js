@@ -17,3 +17,9 @@ color.push('빨강', '핑크', '보라')
 
 console.log('추가색상', color)
 //! 색상은 추가한 순서대로 등록된다.
+
+// Q2 = 숫자 배열에 짝수 추가
+let evenNumbers = [1, 3, 5, 7];
+
+evenNumbers.push(2, 4, 6, 8);
+console.log('결과', evenNumbers)
