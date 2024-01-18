@@ -66,3 +66,12 @@ console.log('배열 내용', grades);
 
 // 배열의 길이 출력
 console.log('배열 길이', grades.length); // 배열 길이 9
+
+//* 문제: 배열조작
+let numbers = [10, 20, 30];
+
+numbers.push(40);// number의 맨끝에 40을 추가해주세요.
+numbers.push(50);// number의 맨끝에 50을 추가해주세요.
+numbers.push(60);// number의 맨끝에 60을 추가해주세요.
+
+console.log(numbers); //[ 10, 20, 30, 40, 50, 60 ]
