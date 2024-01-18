@@ -23,3 +23,27 @@ let evenNumbers = [1, 3, 5, 7];
 
 evenNumbers.push(2, 4, 6, 8);
 console.log('결과', evenNumbers)
+
+//? 심화과정
+// 예제 1: 다양한 데이터 유형 추가
+// push 메서드는 배열에 다양한 데이터 유형을 추가할 수 있습니다. 예를 들어, 문자열, 숫자, 객체, 배열 등을 함께 추가할 수 있습니다.
+let mixedArray = [1, '안녕', { key: 'value' }];
+console.log('기존배열', mixedArray)
+
+mixedArray.push(['배열', '추가']);
+console.log('새로운 배열', mixedArray)
+
+
+// 예제 2: 배열 길이 반환
+// push 메서드는 배열에 추가된 요소의 새로운 길이를 반환합니다. 이를 이용하여 새로운 요소를 추가한 후의 배열 길이를 확인할 수 있습니다.
+let myArray = ['사과', '바나나',
+  '딸기']
+console.log('기존 배열', myArray)
+
+let newLength = myArray.push('키위');
+console.log('새로운 배열', newLength)
+//? push를 사용했음에도 길이의 숫자가 나오는 이유는 무엇일까?
+//! push를 두번 호출하게 되면 첫번쨰는 배열의 값을 주고, 두번째 호출 시에는 길이를 반환한다.
+//! push에서 값만을 추가 하고 싶다면 첫번째 선언해준 변수를 그대로 불러오면 된다.
+
+
