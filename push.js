@@ -85,3 +85,33 @@ if (newNumber % 2 === 0) {
 }
 console.log('배열 내용', number); //배열 내용 [ 1, 3, 5, 7, 9, 4 ]
 //! 조건문을 사용하여 짝수일 경우 값을 추가하는 방식을 사용. 
+
+let originalArray = [2, 7, 15, 10, 23, 8, 13];
+let newArray = [];
+
+
+for (let i = 0; i < originalArray.length; i++) {
+  //반복문을 통하여 배열값들을 개별로 i에 저장.
+  if (originalArray[i] % 2 !== 0) {
+    //0이 아닌 것은 전부 출력하라고 조건문 작성
+    newArray.push(originalArray[i]);
+    // push를 통한 나머지 값 추가
+  }
+}
+console.log('최종 배열 내용', newArray);
+// 최종 배열 내용 [ 7, 15, 23, 13 ]
+
+let originNumbers = [3, 6, 9, 12];
+let squaredValues = [];
+
+for (let i = 0; i < originNumbers.length; i++) {
+  //반복문을 통하여 배열값들을 개별로 i에 저장.
+  squaredValues.push(originNumbers[i] * originNumbers[i]);
+}// originNumbers[i]을 두번 작성하여 제곱값을 구하는 방식.
+//!최종 배열 내용 [9, 36, 81, 144]
+for (let i = 0; i < originNumbers.length; i++) {
+  // 반복문을 통하여 배열값들을 개별로 i에 저장.
+  squaredValues.push(originNumbers[i] ** 2)
+}// originNumbers[i]에 지수 연산자를 사용하여 제곱값을 구하는 방식.
+//!최종 배열 내용 [9, 36, 81, 144]
+console.log('최종 배열 내용', squaredValues);
