@@ -75,3 +75,13 @@ numbers.push(50);// number의 맨끝에 50을 추가해주세요.
 numbers.push(60);// number의 맨끝에 60을 추가해주세요.
 
 console.log(numbers); //[ 10, 20, 30, 40, 50, 60 ]
+
+//* 심화예제
+let number = [1, 3, 5, 7, 9];
+let newNumber = 4;
+
+if (newNumber % 2 === 0) {
+  number.push(newNumber);
+}
+console.log('배열 내용', number); //배열 내용 [ 1, 3, 5, 7, 9, 4 ]
+//! 조건문을 사용하여 짝수일 경우 값을 추가하는 방식을 사용. 
