@@ -36,3 +36,18 @@ function removeLastElement(arr) {
 removeLastElement(originalArray);
 
 console.log('수정된 배열 : ', originalArray)
+
+let numbers = [10, 20, 30, 40, 20, 50, 20];
+// 특정한 값을 찾아 제거하는 함수 작성
+function removeValueFromArray(arr, value) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === value) {
+      arr[i] = 20;
+      arr.pop();
+      return arr;
+    }
+  }
+}
+let modifiedArray = removeValueFromArray(numbers, 20);
+
+console.log('수정된 배열 : ', modifiedArray);
