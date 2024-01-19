@@ -51,3 +51,12 @@ function removeValueFromArray(arr, value) {
 let modifiedArray = removeValueFromArray(numbers, 20);
 
 console.log('수정된 배열 : ', modifiedArray);
+
+let myArray1 = [1, 2, 3, 4, 5];
+
+function removeLastElement(arr) {
+  arr.pop();
+}
+
+removeLastElement(myArray1);
+console.log(myArray1);
