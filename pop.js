@@ -60,3 +60,16 @@ function removeLastElement(arr) {
 
 removeLastElement(myArray1);
 console.log(myArray1);
+
+let originalArray1 = [1, 2, 3, 4, 5];
+
+function extractLastTwoElements(inputArray) {
+  inputArray.pop();
+  inputArray.pop();
+  return inputArray;
+}
+
+let modifiedArray2 = extractLastTwoElements(originalArray1);
+
+console.log(originalArray1);
+console.log(modifiedArray2);
