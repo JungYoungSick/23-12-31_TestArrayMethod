@@ -34,3 +34,36 @@ while (waitingQueue.length > 0) {
 }
 
 console.log("대기열이 비었습니다.");
+/**
+ * 손님 홍길동님, 주문을 받으세요
+손님 김철수님, 주문을 받으세요
+손님 이영희님, 주문을 받으세요
+손님 박영수님, 주문을 받으세요
+대기열이 비었습니다.
+*/
+
+function findMax(arr) {
+  if (arr.length === 0) {
+    // 빈 배열인 경우 최댓값이 없으므로 undefined 반환
+    return undefined;
+  }
+
+  let max = arr[0];  // 배열의 첫 번째 요소를 초기 최댓값으로 설정
+
+  while (arr.length > 0) {
+    const currentElement = arr.shift();
+    if (currentElement > max) {
+      // 현재 요소가 현재까지의 최댓값보다 크면 갱신
+      max = currentElement;
+    }
+  }
+
+  return max;
+}
+
+// 사용 예제
+const numbers = [12, 5, 23, 8, 16];
+const maxNumber = findMax(numbers);
+
+console.log("최댓값:", maxNumber);
+
