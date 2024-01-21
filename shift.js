@@ -67,3 +67,19 @@ const maxNumber = findMax(numbers);
 
 console.log("최댓값:", maxNumber);
 
+function extractOddNumbers(arr) {
+  const oddNumbers = [];
+
+  while (arr.length > 0) {
+    const currentElement = arr.shift();
+    if (currentElement % 2 !== 0) {
+      oddNumbers.push(currentElement);
+    }
+  }
+  return oddNumbers;
+}
+
+const numbers1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const oddNumbers = extractOddNumbers(numbers1);
+
+console.log("홀수 : ", oddNumbers);
