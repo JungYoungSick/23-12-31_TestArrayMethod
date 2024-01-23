@@ -13,3 +13,20 @@ console.log(myArray); //결과 : [0, 1, 2, 3, 4]
 
 myArray.unshift(-2, -1);
 console.log(myArray); //결과 : [-2, -1, 0, 1, 2, 3, 4]
+
+let users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+  { id: 3, name: "Charlie" },
+]
+
+function addNewUser(usersArray, newUser, maxLength) {
+  usersArray.unshift(newUser);
+
+  if (usersArray.length > maxLength) {
+    usersArray.pop();
+  }
+}
+
+addNewUser(users, { id: 4, name: "Dave" }, 3);
+console.log(users);
