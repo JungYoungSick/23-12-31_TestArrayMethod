@@ -5,4 +5,9 @@ console.log(reverseFruite)
 
 let myArray = [2, 3, 4];
 myArray.unshift(1);
-console.log(myArray);
+console.log(myArray); //결과 : [1, 2, 3, 4]
+
+let length = myArray.unshift(0);
+console.log(length); //결과 : 5
+console.log(myArray); //결과 : [0, 1, 2, 3, 4]
+
