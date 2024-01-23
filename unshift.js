@@ -11,3 +11,5 @@ let length = myArray.unshift(0);
 console.log(length); //결과 : 5
 console.log(myArray); //결과 : [0, 1, 2, 3, 4]
 
+myArray.unshift(-2, -1);
+console.log(myArray); //결과 : [-2, -1, 0, 1, 2, 3, 4]
