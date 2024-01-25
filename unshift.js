@@ -30,3 +30,19 @@ function addNewUser(usersArray, newUser, maxLength) {
 
 addNewUser(users, { id: 4, name: "Dave" }, 3);
 console.log(users);
+
+// 문자열을 담은 배열
+let messages = ["Hello", "World", "JavaScript"];
+
+// 조건을 충족하는 문자열만 배열에 추가하는 함수
+function addMessageIfLongEnough(messagesArray, newMessage, minLength) {
+  if (newMessage.length >= minLength) {
+    messagesArray.unshift(newMessage);
+  }
+}
+
+addMessageIfLongEnough(messages, "Hi", 3); //! "Hi"는 길이 조건을 만족하지 않음
+console.log(messages); // 결과: ["Hello", "World", "JavaScript"]
+
+addMessageIfLongEnough(messages, "Wellcome", 3); //? "Wellcome"은 길이 조건을 만족
+console.log(messages); // 결과: ["Welcome", "Hello", "World", "JavaScript"]
