@@ -46,3 +46,35 @@ console.log(messages); // 결과: ["Hello", "World", "JavaScript"]
 
 addMessageIfLongEnough(messages, "Wellcome", 3); //? "Wellcome"은 길이 조건을 만족
 console.log(messages); // 결과: ["Welcome", "Hello", "World", "JavaScript"]
+
+// 고객 문의사항을 담은 배열
+let inquiries = [
+  { id: 1, question: "Payment method?" },
+  { id: 2, question: "Delivery time?" },
+  { id: 3, question: "Return policy?" },
+  { id: 4, question: "Warranty terms?" },
+  { id: 5, question: "Discount offers?" },
+];
+
+// 새 문의사항을 배열의 시작에 추가하는 함수
+function addInquiry(inquiresArray, newInquiry) {
+  inquiresArray.unshift(newInquiry);
+  if (inquiresArray.length > 5) {
+    inquiresArray.pop();
+  }
+}
+
+//새 문의사항 추가
+addInquiry(inquiries, {
+  id: 6,
+  question: "How to track my order?",
+});
+console.log(inquiries);
+/**결과 :
+ * [
+  { id: 6, question: 'How to track my order?' },
+  { id: 1, question: 'Payment method?' },
+  { id: 2, question: 'Delivery time?' },
+  { id: 3, question: 'Return policy?' },
+  { id: 4, question: 'Warranty terms?' }
+] */
